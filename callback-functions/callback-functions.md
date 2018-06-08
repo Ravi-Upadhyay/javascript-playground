@@ -1,3 +1,8 @@
 # Javascript - Callback Functions
 
->   A closure is the combination of a function and the lexical environment within which that function was declared.       `says MDN`
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. There so many gloomy things which revloves around. We will list such things here with example.
+
+> In javascript functions are first-class objects, functions are of the type `Object`. 
+
+1. Passing arguments to callback function
+
