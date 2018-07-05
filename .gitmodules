@@ -1,0 +1,3 @@
+[submodule "ecma-script-6"]
+	path = ecma-script-6
+	url = https://github.com/Ravi-Upadhyay/ecma-script-6.git
