@@ -5,9 +5,10 @@ Here most of the topics will be related to the core-javascript, and future devel
 
 ## Index
 
-1. [Callback Functions](callback-functions)
-2. [ECMA Script 6](https://github.com/Ravi-Upadhyay/ecma-script-6.git)
-3. [Objects](objects)
+- [JS Basics](basics)
+- [Objects](objects)
+- [Callback Functions](callback-functions)
+- [ECMA Script 6](https://github.com/Ravi-Upadhyay/ecma-script-6.git)
 
 
 
