@@ -6,3 +6,4 @@ always some basics you can look into to refresh or update your level of understa
 ## Index:
 
 - [Datatypes](datatypes.md)
+- [Operators](operators.md)
