@@ -121,7 +121,7 @@ Number.MIN_SAFE_INTEGER;            //-9007199254740991
     
 ## Points to ponder:
     
-- JavaScript evaluates expressions from left to right. Different sequences can produce different results. _See example-P1_.
+- JavaScript evaluates expressions from left to right.Different sequences can produce different results. _See example-P1_.
 - Some behaviour to note about `null` _See example-P2_
 - It is possible to use it as an `identifier` (variable name) in any scope other than the global scope (because `undefined` is not a reserved word). But, should not do it. _See example-U1.
     
