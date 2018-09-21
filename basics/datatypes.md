@@ -79,3 +79,63 @@ if(typeof x === undefined) //This will execute
 else //Else, this will execute
 
 ```
+
+#### Number:
+
+- According to the ECMAScript standard, there is only one number type: the double-precision 64-bit binary format IEEE 754 value (numbers between -(2^53 -1) and 2^53 -1).
+- In addition to being able to represent floating-point numbers, the number type has three symbolic values: `+Infinity`, `-Infinity`, and `NaN` (not-a-number).
+- All three symbolic values are properties of global `Object`.
+- You can also refer `Number` under `Object` Notes for more details[Number Object](./objects).
+- The number type has only one integer that has two representations: 0 is represented as -0 and +0.
+
+```javascript
+
+/*EXAMPLE-NUM-2: Workaround: Number datatype in JS*/
+
+// All Symbolic values are properties of global Object
+
+Infinity                            //Infinity
+-Infinity                           //-Infinity
+NaN                                 //NaN
+
+// Different operations with Infinity
+console.log(Infinity          );    //Infinity  
+console.log(Infinity + 1      );    //Infinity  
+console.log(Math.pow(10, 1000));    //Infinity  
+console.log(Math.log(0)       );    //-Infinity  
+console.log(1 / Infinity      );    //0 
+
+// Some constants related to Number
+Number.MAX_VALUE;                   //1.7976931348623157e+308
+Number.MAX_SAFE_INTEGER;            //9007199254740991
+Number.MIN_SAFE_INTEGER;            //-9007199254740991
+
+// Two representations of Integer
++0 === -0                           //true
+42/+0                               //Infinity
+42/-0                               //-Infinity
+```
+
+
+#### String:
+    
+## Points to ponder:
+    
+- JavaScript evaluates expressions from left to right. Different sequences can produce different results. _See example-P1_.
+- Some behaviour to note about `null` _See example-P2_
+- It is possible to use it as an `identifier` (variable name) in any scope other than the global scope (because `undefined` is not a reserved word). But, should not do it. _See example-U1.
+    
+```javascript
+/* EXAMPLE-P1: JS converts number to string when there is operation with string and see how order matters as JS always solves expressions from left to right
+*/
+
+    let a = 16 + 4 + "Volvo";         // 20Volvo
+    let b = "Volvo" 16 + 4;           // Volvo164
+    
+/* EXAMPLE-P2: Interesting behaviour of null */
+
+!null               // true
+(1 + null)          // 1
+
+/*  */
+```
