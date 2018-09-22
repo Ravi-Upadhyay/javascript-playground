@@ -5,11 +5,14 @@ Here most of the topics will be related to the core-javascript, and future devel
 
 ## Index
 
-1. [Callback Functions](callback-functions)
-2. [ECMA Script 6](https://github.com/Ravi-Upadhyay/ecma-script-6.git)
-3. [Objects](objects)
-4. [Problems, Handson, Algorithms](practice-problems)
+- [JS Basics](basics)
+- [Objects](objects)
+- [Callback Functions](callback-functions)
+- [ECMA Script 6](https://github.com/Ravi-Upadhyay/ecma-script-6.git)
+- [Problems, Handson, Algorithms](practice-problems)
    1. [Make Social Groups Out of Friendship Matrix](practice-problems/social-grouping)
+
+
 
 
 ## Authors

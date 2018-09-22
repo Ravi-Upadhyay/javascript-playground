@@ -1,89 +1,144 @@
 # Javascript Objects
 
-The purpose of this module is to put all work related to JS objects. It will be submodule to Javascript Playground Project. As Objects is very important part of the javascript. 
+The purpose of this module is to put all resources related to JS objects. It will be submodule to Javascript Playground Project. As Objects is very important part of the javascript. 
+
+> 
 
 __//TODO: Only template is there for now. Keep adding related content__
 
-## Getting Started
+---
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Index:
 
-### Prerequisites
+- Basics
+- Classification
+- Methods
+- Properties
+- Object-Oriented javascript
+- Prototypes
+- Resources over web
 
-What things you need to install the software and how to install them
+---
+
+## Basics:
+//TODO: Complete this section, read but left due to time crunch follow resources over web section.
+
+### Ways of object creation:
+
+#### 1. Object literal:
+
+#### 2. Constructor function:
+
+#### 3. Object constructor:
+
+We can use `Object()` constructor to create new `object`.
+
+```javascript
+
+/*EXAMPLE-WOT-3-1 Using Object constructor to create empty object*/
+
+var person1 = new Object();
+person1.name = "Chris";
+person1['age'] = 38;
+person1.greeting = function() {
+  alert('Hi! I\'m ' + this.name + '.');
+};
+
+/*EXAMPLE-WOT-3-2 Using Object constructor and pass object literal to prefill properties and methods*/
+
+var person1 = new Object({
+    name = "Chris",
+    age = 38,
+    greeting = function() {
+        alert('Hi! I\'m ' + this.name + '.');
+    }
+});
 
 ```
-Give examples
-```
 
-### Installing
+#### 4. Object.create() method:
 
-A step by step series of examples that tell you how to get a development env running
+JavaScript has a built-in method called `create()` that allows you to create instances without creating `constructor`. One major limitation is IE8 doesn't support it.
 
-Say what the step will be
+```javascript
 
-```
-Give the example
-```
+/*EXAMPLE-WOT-3-4 Using Object.create()*/
 
-And repeat
+var person1 = new Object();
+person1.name = "Chris";
+person1['age'] = 38;
+person1.greeting = function() {
+  alert('Hi! I\'m ' + this.name + '.');
+};
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+var person2 = Object.create(person1);
 
 ```
-Give an example
+
+## Classification:
+
+### Number:
+
+- The `Number` JavaScript object is a wrapper object allowing you to work with numerical values. 
+- A `Number` object is created using the `Number()` constructor.
+
+//TODO: Due to time crunch, leaving this. Complete by following this link[Number, MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+
+## Methods:
+
+//TODO: Describe Methods: For more details visit [Methods](methods).
+
+## Properties:
+
+//TODO: Describe Poperties: For more details visit [Properties](properties).
+
+## Object-Oriented javascript:
+
+//TODO:Describe something about javascript, for more follow [Object Oriented Javascript](./object-oriented-javascript)
+
+## Protoypes:
+
+- Javascript often described as `prototype-based language`.
+- Each object has a `prototype-object`, which acts as a template object from which it inherits properties and methods.
+- An object's prototype object may also have prototype object hence forming `prototype chain`.
+- Properties and methods are defined on the `prototype` property on the Objects' constructor functions, not the object instances themselves.
+- In JavaScript, a link is made between the object instance and its `prototype` (its `\_\_proto\_\_` property, which is derived from the prototype property on the constructor. 
+
+```javascript
+/*EXAMPLE-PRO-1 Passing object literal to create new object and using _proto_ OR getPrototypeOf()*/
+var Person = new Object({                   // { name    : "Ravi" }
+  name    : "Ravi"                          
+});
+
+var Person1 = Object.create(Person);        // {}
+Person1.name;                               // "Ravi"
+Person1._proto_;                            // { name  : "Ravi" }
+Object.getPrototypeOf(Person1);             // { name  : "Ravi" }, recommended way                                         
+/* EXAMPLE-PRO-2 Using constructor function */
+var Person = function(gender,name,age){
+  this.gender = gender;
+	this.age    = age;
+	this.name	= name;
+}
+
+
+var CEO = new Person('Male', 'Pramod', 32);   // 
+
+// prototype property, You can use prototype to add property/method to constructor function
+Person.prototype.getBio = function getBio(){
+	console.log('Hi guys I am ' + this.name + 'and I am ' + this.age + 'years old');
+}
+
+CEO.getBio();                                 // "Hi guys I am Pramod and I am 32 years old"
+
+Person.prototype;                             // {getBio: f, constructor: f }                      
+Person.__proto__;                             // f() { [native code] }      
+
 ```
 
-### And coding style tests
+## Resources over web:
 
-Explain what these tests test and why
+- [Basics of Objects - Tutorial, MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
+- [Objects, MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [Working with Objects, MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
