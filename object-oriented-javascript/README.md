@@ -5,7 +5,7 @@ Object-oriented JavaScript (OOJS) — this article presents a basic view of obje
 ## Index:
 
 - Basics of object-oriented programming
-- 
+- Object oriented javascript
 
 ## Basics of object-oriented programming:
 
@@ -13,6 +13,10 @@ Object-oriented JavaScript (OOJS) — this article presents a basic view of obje
 - `Object` data (and often, functions too) can be stored neatly (the official word is `encapsulated`) inside an object package (which can be given a specific name to refer to, which is sometimes called a `namespace`).
 - When an `object` instance is created from a `class`, the `class`'s `constructor` function is run to create it. This process of creating an object instance from a class is called `instantiation` — the object instance is instantiated from the `class`.
 - In OOP, we can create new classes based on other classes — these new `child` classes can be made to inherit the data and code features of their `parent` class
+
+## Object oriented javascript:
+
+//TODO: Describe something about object oriented javascript
 
 ### Constructors and object instances:
 
@@ -52,3 +56,4 @@ function Person(name){
 //Creating new person
 var salva = new Person('Salva');
 ```
+

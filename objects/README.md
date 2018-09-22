@@ -96,6 +96,46 @@ var person2 = Object.create(person1);
 
 //TODO:Describe something about javascript, for more follow [Object Oriented Javascript](./object-oriented-javascript)
 
+## Protoypes:
+
+- Javascript often described as `prototype-based language`.
+- Each object has a `prototype-object`, which acts as a template object from which it inherits properties and methods.
+- An object's prototype object may also have prototype object hence forming `prototype chain`.
+- Properties and methods are defined on the `prototype` property on the Objects' constructor functions, not the object instances themselves.
+- In JavaScript, a link is made between the object instance and its `prototype` (its `\_\_proto\_\_` property, which is derived from the prototype property on the constructor. 
+
+```javascript
+/*EXAMPLE-PRO-1 Passing object literal to create new object and using _proto_ OR getPrototypeOf()*/
+var Person = new Object({                   // { name    : "Ravi" }
+  name    : "Ravi"                          
+});
+
+var Person1 = Object.create(Person);        // {}
+Person1.name;                               // "Ravi"
+Person1._proto_;                            // { name  : "Ravi" }
+Object.getPrototypeOf(Person1);             // { name  : "Ravi" }, recommended way                                         
+/* EXAMPLE-PRO-2 Using constructor function */
+var Person = function(gender,name,age){
+  this.gender = gender;
+	this.age    = age;
+	this.name	= name;
+}
+
+
+var CEO = new Person('Male', 'Pramod', 32);   // 
+
+// prototype property, You can use prototype to add property/method to constructor function
+Person.prototype.getBio = function getBio(){
+	console.log('Hi guys I am ' + this.name + 'and I am ' + this.age + 'years old');
+}
+
+CEO.getBio();                                 // "Hi guys I am Pramod and I am 32 years old"
+
+Person.prototype;                             // {getBio: f, constructor: f }                      
+Person.__proto__;                             // f() { [native code] }      
+
+```
+
 ## Resources over web:
 
 - [Basics of Objects - Tutorial, MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
