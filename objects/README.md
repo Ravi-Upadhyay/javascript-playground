@@ -136,6 +136,65 @@ Person.__proto__;                             // f() { [native code] }
 
 ```
 
+### The prototype property:
+
+- The inherited ones are the ones defined on the `prototype` property (you could call it a sub-namespace).
+- The ones that begin with `Object.prototype`., and not the ones that begin with just `Object`.
+- The `prototype` property's value is an object, which is basically a bucket for storing properties and methods that we want to be inherited by objects further down the `prototype chain`.
+- So `Object.prototype.watch()`, `Object.prototype.valueOf()`, etc., are available to any object types that inherit from `Object.prototype`, including new object instances created.
+- `Object.is()`, `Object.keys()`, and other members not defined inside the prototype bucket are not inherited by object instances or object types that inherit from `Object.prototype`. They are methods/properties available just on the` Object()` `constructor` itself.
+
+```javascript
+
+/*EXAMPLE-PRO-3: prototype property*/
+
+// 1: Creating constructor function
+var Human = function(gender,age,dob){
+	this.gender = gender;
+	this.age 	= age;
+	this.dob	= dob;
+}
+/* Human
+
+ƒ (gender,age,dob){
+	this.gender = gender;
+	this.age 	= age;
+	this.dob	= dob;
+}
+*/
+
+// 2: Adding method to prototype 
+Human.prototype.isAdult = function(){
+	return (this.age >= 18) ? true : false;
+}
+
+/* Human
+
+ƒ (gender,age,dob){
+	this.gender = gender;
+	this.age 	= age;
+	this.dob	= dob;
+}
+*/
+
+/* Human.prototype.isAdult
+
+ƒ (){
+	return (this.age >= 18) ? true : false;
+}
+*/
+
+// 3: Creating object using this constructor
+
+var me = new Human('Male','20', '01/12/1980');
+
+// 4: checking prototype method
+
+me.isAdult();                               //true
+Human.isAdult();                            //undefined
+
+```
+
 ## Resources over web:
 
 - [Basics of Objects - Tutorial, MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
