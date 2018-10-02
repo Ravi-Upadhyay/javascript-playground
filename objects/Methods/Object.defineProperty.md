@@ -10,7 +10,7 @@
 - Property descriptors have two flavours
     - **Data descriptors:**  Is a property that has a value, which may or may not be writable.
     - **Accessor descriptors:** Is a property described by getter-setter pair  of functions.
-- 
+- Please visit [property](../properties) for more details about this
 
 ### Syntax:
 
@@ -21,3 +21,26 @@ Object.defineProperty(obj, prop, descriptor);
 ```
 
 ### Example:
+
+```javascript
+
+/* EXAMPLE-DP-1 Make property of object not writable */
+
+var obj = {
+    prop    : 'someValue'
+}
+
+Object.defineProperty(obj, prop, {
+    writable    : false
+});
+
+obj.prop = 'anotherValue';                          // 'someValue', it will not changed. If in strict mode it 
+                                                    // will through error.
+
+// If property is another object.
+
+
+
+
+
+```

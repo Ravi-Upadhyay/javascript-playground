@@ -14,6 +14,7 @@ __//TODO: Not fully updated. Work in progress__
 - Properties
 - Object-Oriented javascript
 - Prototypes
+- Points to ponder
 - Resources over web
 
 ---
@@ -251,6 +252,27 @@ var me = new Human('Male','20', '01/12/1980');
 
 me.isAdult();                               //true
 Human.isAdult();                            //undefined
+
+```
+
+## Points to ponder:
+
+- When we create an object. Its identifier acts as a pointer only. Potential question for interviews. __See example-pop-1__
+
+```javascript
+
+/* EXAMPLE-POP-1 Javascript object declaration/creation as a pointer only */
+
+var obj = {
+	someProp	: 'some value'
+}
+
+var anotherObj = obj;
+
+anotherObj.anotherProp = 'another value';
+
+// obj = {someProp : 'some value', anotherProp : 'another value'};
+// anotherObj = {someProp : 'some value', anotherProp : 'another value'};
 
 ```
 
