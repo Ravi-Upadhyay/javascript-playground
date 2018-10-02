@@ -9,7 +9,7 @@
 
 ## Description:
 
-    
+![Properties in JavaScript](https://github.com/Ravi-Upadhyay/javascript-playground/Resources/blob/master/objects/Properties/Properties-in-JS.jpg)    
 
 ## Properties:
 
