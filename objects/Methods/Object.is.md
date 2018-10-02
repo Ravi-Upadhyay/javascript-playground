@@ -1,7 +1,8 @@
 # Object.is() Method:
 
-It tells whether two values are the same value. is a new utility for checking strict equality of two values
-but without the nuanced exceptions that `===` has for `NaN` and `-0` values. Goto [MDN Website](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) for more details
+- It tells whether two values are the same value. 
+- It is a new utility for checking strict equality of two values but without the nuanced exceptions that `===` has for `NaN` and `-0` values. 
+- Goto [MDN Website](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) for more details
 
 ### Description 
 

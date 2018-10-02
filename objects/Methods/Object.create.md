@@ -1,12 +1,17 @@
-# Object.create Method:
+# create Method:
 
 - Used to create new object instance.
+- TODO: put more information about create method.
+
+
+### Syntax:
 
 ```javascript
-
-/* SYNTAX: */
 Object.create(existing-object);
+```
 
+### Example:
+```javascript
 /* EXAMPLE-1: create new object instance*/
 
 var person1 = {

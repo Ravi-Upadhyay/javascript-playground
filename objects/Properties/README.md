@@ -2,6 +2,15 @@
 
 //TODO: Proper description of properties
 
-## Index
+## Index:
 
-- [Check for properties](CheckForPropertied.md)
+- Description
+- Properties
+
+## Description:
+
+    
+
+## Properties:
+
+- [Check for properties](CheckForProperties.md)

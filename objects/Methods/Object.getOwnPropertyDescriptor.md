@@ -1,0 +1,5 @@
+# getOwnPropertyDescriptor Method:
+
+### Syntax:
+
+### Example: 
