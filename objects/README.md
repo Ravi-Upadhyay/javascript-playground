@@ -22,6 +22,9 @@ __//TODO: Not fully updated. Work in progress__
 ## Basics:
 //TODO: Complete this section, read but left due to time crunch follow resources over web section.
 
+- Ways of object creation
+- Looping through objects
+
 ### Ways of object creation:
 
 There are four ways of creating an object in javascript. We will see all four approaches here and when we need to use specific approach.
@@ -140,6 +143,23 @@ var me = new Human('Ravi', 'Sharma', 28);
 // Human {fName: "Ravi", lName: "Sharma", age: 28}
 
 ```
+
+### Looping through objects:
+
+#### The for..in loop:
+
+- This is used to loop around the properties of an object.
+- If `enumerable = true` then it will be looped through.
+
+```javascript
+
+for (var propertyName in obj) {
+	console.log(propertyName);
+	console.log(obj[propertyName]);
+}
+
+```
+
 
 ## Classification of Objects:
 
