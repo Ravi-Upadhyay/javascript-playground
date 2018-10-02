@@ -16,9 +16,10 @@ Here most of the topics will be related to the core-javascript, and future devel
 
 ## Notes:
 
-## Tasks:
+## Tasks - A To Do List:
 
-[] Read about `Reselect Library`, A library to memoize function calls and improve performance
+[ ] Object.freeze documentation (objects/methods/Object.freeze.md) [Here](objects/methods/Object.freeze.md)
+[ ] Read about `Reselect Library`, A library to memoize function calls and improve performance
 
 ## Authors:
 

@@ -8,4 +8,5 @@
 - [Object.create](Object.create.md)
 - [Object.getPrototypeOf](Object.getPrototypeOf.md)
 - [Object.defineProperty](Object.defineProperty.md)
+- [Object.freeze](Object.freeze.md)
 - [Object.getOwnPropertyDescriptor](Object.getOwnPropertyDescriptor.md)
