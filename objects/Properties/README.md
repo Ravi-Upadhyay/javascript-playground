@@ -16,7 +16,7 @@
 - `Object.defineProperty()` method can be used to define properties precisely with some more options. See [Object.defineProperty()](./Methods/Object.defineProperty.md).
 
 
-![Properties in JS](https://github.com/Ravi-Upadhyay/javascript-playground/blob/master/objects/Properties/Resources/Properties-in-JS.jpg)  
+![Properties in JS](https://github.com/Ravi-Upadhyay/javascript-playground/blob/master/objects/Properties/resources/Properties-in-JS.jpg)  
 
 
 ```javascript
