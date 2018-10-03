@@ -18,7 +18,6 @@
 
 ![Properties in JS](https://github.com/Ravi-Upadhyay/javascript-playground/blob/master/objects/Properties/Resources/Properties-in-JS.jpg)  
 
-
 ```javascript
 
 var obj = {};
@@ -51,10 +50,40 @@ obj;                                                            // {
                                                                 //      byDefProp   : 3
                                                                 // }
 
+```
+
+### Getter: 
+
+- Sometimes it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls.
+- It is not possible to simultaneously have a `getter` bound to a property and have that property actually hold a `value`, although it is possible to use a getter and a setter in conjunction to create a type of `pseudo-property`.
+- A getter can be removed using the `delete` operator.
+
+```javascript
+
+/* EXAMPLE-GTR-1 Simple way to define getter property */
+
+var obj = {
+  log: ['example','test'],
+  get latest() {
+    if (this.log.length == 0) return undefined;
+    return this.log[this.log.length - 1];
+  }
+}
+console.log(obj.latest);                                    // "test".
+
+/* EXAMPLE-GTR-2 Define getter property using defineProperty() */
+
+obj.defineProperty(obj, 'latest',{
+    get : function(){
+        if (this.log.length == 0) return undefined;
+        return this.log[this.log.length - 1];
+    }
+});
+
 
 
 ```
 
-## Properties:
+## Properties of global Object:
 
 - [Check for properties](CheckForProperties.md)
