@@ -13,7 +13,7 @@
 - Here we will discuss about properties in general.
 - Properties are key value pair on object-name-space.
 - See the diagram below to know about how to create or access properties.
-- `Object.defineProperty()` method can be used to define properties precisely with some more options. See [Object.defineProperty()](./Methods/Object.defineProperty.md).
+- `Object.defineProperty()` method can be used to define properties precisely with some more options. See [Object.defineProperty()](../Methods/Object.defineProperty.md).
 
 
 ![Properties in JS](https://github.com/Ravi-Upadhyay/javascript-playground/blob/master/objects/Properties/Resources/Properties-in-JS.jpg)  
@@ -79,6 +79,16 @@ obj.defineProperty(obj, 'latest',{
         return this.log[this.log.length - 1];
     }
 });
+
+```
+
+### Setter:
+
+- In JavaScript, a setter can be used to execute a function whenever a specified property is attempted to be changed.
+- Setters are most often used in conjunction with getters to create a type of `pseudo-property`.
+- It is not possible to simultaneously have a setter on a property that holds an actual value.
+
+```javascript
 
 
 
