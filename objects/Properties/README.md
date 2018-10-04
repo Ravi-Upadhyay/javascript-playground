@@ -1,12 +1,11 @@
 # Properties:
 
-//TODO: Proper description of properties
+Property is a `name-value` pair which is on `name-space` of an object. It is used to generally hold the value. Another thing which can be part of object is method. 
 
 ## Index:
 
 - Description
-- Properties
-- Properties of Object
+- Properties of global Object
 
 ## Description:
 
@@ -87,10 +86,24 @@ obj.defineProperty(obj, 'latest',{
 - In JavaScript, a setter can be used to execute a function whenever a specified property is attempted to be changed.
 - Setters are most often used in conjunction with getters to create a type of `pseudo-property`.
 - It is not possible to simultaneously have a setter on a property that holds an actual value.
+- See _example-set-1_.
 
 ```javascript
 
+/* EXAMPLE-SET-1 Simple example of setter, When it can be used */
 
+var language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: []
+}
+
+language.current = 'EN';
+console.log(language.log); // ['EN']
+
+language.current = 'FA';
+console.log(language.log); // ['EN', 'FA']
 
 ```
 
