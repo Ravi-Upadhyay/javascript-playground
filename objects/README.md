@@ -199,6 +199,12 @@ In javascript everthying except primitive values are objects.
 
 ## Protoypes:
 
+- Description
+- The prototype property
+- Difference between prototype and \_\_proto\_\_
+
+### Description:
+
 - Javascript often described as `prototype-based language`.
 - Each object has a `prototype-object`, which acts as a template object from which it inherits properties and methods.
 - An object's prototype object may also have prototype object hence forming `prototype chain`.
@@ -272,6 +278,71 @@ var me = new Human('Male','20', '01/12/1980');
 
 me.isAdult();                               //true
 Human.isAdult();                            //undefined
+
+```
+
+### Difference between prototype and \_\_proto\_\_:
+
+- Each `function` in javascript has `prototype` property, and it is an `object`.
+- When the `function` is used as `constructor` function to create `object instance`, the `prototype` property is accessible from child also and thus forms `prototype-chain`.
+- In contrast, each object has `\_\_proto\_\_` which is exact copy of `prototype` of its `constructor` function.
+
+```javascript
+
+/* EXAMPLE-PRO-4 Difference between prototype property and \_\_proto\_\_ */
+
+function myFunc() {
+	// Do Something
+}														
+
+myFunc.prototype;										// {constructor: f}
+myFunc.__proto__;										// ƒ () { [native code] }
+
+var myObj = {
+	someKey	: 'someValue'
+};
+
+myObj.prototype;										// undefined
+myObj.__proto__;										// {constructor: f .....}
+
+// Please note that this object will follow Object constructor
+
+
+```
+
+### How inheritance works:
+
+- When we define some property on prototype, it will be accessible from all object instances that has been created using that constructor function.
+- But, When we create a property on that instance with same key, It will not reach prototype chain.
+- `hasOwnProperty()` method will enable you to determine whether this property on object itself or is inherited via prototype-chain. _see example-pro-5_
+
+```javascript
+
+/* EXAMPLE-PRO-5 Basic example of inheritance */
+
+// Point-1: Constructor function
+function Cat(name,color) {
+	this.name	= name;
+	this.color	= color;
+}
+
+// Point-2: Defining age property on prototype object of Cat
+Cat.prototype.age	= 3;
+
+// Point-3: Creating object instances using Cat
+var fluffy 	= new Cat('fluffy', 'white');
+var muffin	= new Cat('muffin','brown');
+
+console.log(fluffy.age);							// 3
+console.log(muffin.age);							// 3
+
+// Point-4: Change age of fluffy object instance
+fluffy.age = 4;
+
+console.log(fluffy.age);							// 4
+console.log(fluffy.__proto__.age);					// 3
+
+console.log(fluffy.hasOwnProperty(age));			// true
 
 ```
 
