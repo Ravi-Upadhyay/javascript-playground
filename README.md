@@ -7,6 +7,7 @@ Here most of the topics will be related to the core-javascript, and future devel
 
 - [JS Basics](basics)
 - [Objects](objects)
+- [Events](events)
 - [Callback Functions](callback-functions)
 - [ECMA Script 6](https://github.com/Ravi-Upadhyay/ecma-script-6.git)
 - [Libraries](libraries)
