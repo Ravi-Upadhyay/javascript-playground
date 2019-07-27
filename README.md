@@ -13,9 +13,14 @@ Here most of the topics will be related to the core-javascript, and future devel
 - [Libraries](libraries)
 - [Problems, Handson, Algorithms](practice-problems)
    1. [Make Social Groups Out of Friendship Matrix](practice-problems/social-grouping)
+- [Resources over web](#resources-over-web)
 
 
 ## Notes:
+
+## Resources over web<a name="resources-over-web"></a>
+
+1. [https://github.com/airbnb/javascript](Airbnb style guide - Javascript)
 
 ## Tasks - A To Do List:
 
